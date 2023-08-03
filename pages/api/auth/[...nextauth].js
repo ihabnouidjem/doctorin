@@ -8,6 +8,7 @@ export default NextAuth({
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     }),
   ],
+  secret: process.env.NEXT_PUBLIC_SECRET,
   callbacks: {
     session: async ({ session, token }) => {
       if (session?.user) {

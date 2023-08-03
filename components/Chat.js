@@ -38,7 +38,7 @@ function Chat({ page, setPage }) {
         .get(
           `${
             process.env.NODE_ENV === "production"
-              ? process.send.DOMAIN
+              ? process.env.DOMAIN
               : process.env.NODE_ENV === "development" &&
                 "http://localhost:3000"
           }/api/chat/${appState.chat.chatId}`
