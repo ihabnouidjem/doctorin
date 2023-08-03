@@ -75,7 +75,7 @@ export async function getServerSideProps(context) {
   const profile = fetch(
     `${
       process.env.NODE_ENV === "production"
-        ? process.env.DOMAIN
+        ? "https://doctorin.vercel.app"
         : process.env.NODE_ENV === "development" && "http://localhost:3000"
     }/api/users`,
     {
@@ -94,7 +94,7 @@ export async function getServerSideProps(context) {
   const doctors = fetch(
     `${
       process.env.NODE_ENV === "production"
-        ? process.env.DOMAIN
+        ? "https://doctorin.vercel.app"
         : process.env.NODE_ENV === "development" && "http://localhost:3000"
     }/api/users/doctors`
   )
@@ -106,7 +106,7 @@ export async function getServerSideProps(context) {
   const map = fetch(
     `${
       process.env.NODE_ENV === "production"
-        ? process.env.DOMAIN
+        ? "https://doctorin.vercel.app"
         : process.env.NODE_ENV === "development" && "http://localhost:3000"
     }/api/map`
   )

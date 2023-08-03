@@ -12,7 +12,7 @@ function SearchBanner() {
       .post(
         `${
           process.env.NODE_ENV === "production"
-            ? process.env.DOMAIN
+            ? "https://doctorin.vercel.app"
             : process.env.NODE_ENV === "development" && "http://localhost:3000"
         }/api/users/search`,
         search.search

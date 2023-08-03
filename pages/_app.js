@@ -27,7 +27,7 @@ export default function App({
       .post(
         `${
           process.env.NODE_ENV === "production"
-            ? process.send.DOMAIN
+            ? "https://doctorin.vercel.app"
             : process.env.NODE_ENV === "development" && "http://localhost:3000"
         }${path}`,
         items
@@ -43,7 +43,7 @@ export default function App({
       .post(
         `${
           process.env.NODE_ENV === "production"
-            ? process.send.DOMAIN
+            ? "https://doctorin.vercel.app"
             : process.env.NODE_ENV === "development" && "http://localhost:3000"
         }${chatId}`,
         { messages: newMessages }
@@ -54,7 +54,7 @@ export default function App({
           .post(
             `${
               process.env.NODE_ENV === "production"
-                ? process.send.DOMAIN
+                ? "https://doctorin.vercel.app"
                 : process.env.NODE_ENV === "development" &&
                   "http://localhost:3000"
             }${srcId}`,
@@ -98,7 +98,7 @@ export default function App({
     axios.post(
       `${
         process.env.NODE_ENV === "production"
-          ? process.send.DOMAIN
+          ? "https://doctorin.vercel.app"
           : process.env.NODE_ENV === "development" && "http://localhost:3000"
       }${destId}`,
       { chat: newDestChat }
@@ -110,7 +110,7 @@ export default function App({
       .post(
         `${
           process.env.NODE_ENV === "production"
-            ? process.send.DOMAIN
+            ? "https://doctorin.vercel.app"
             : process.env.NODE_ENV === "development" && "http://localhost:3000"
         }/api/chat`,
         { messages: [message] }
@@ -145,7 +145,7 @@ export default function App({
           .post(
             `${
               process.env.NODE_ENV === "production"
-                ? process.send.DOMAIN
+                ? "https://doctorin.vercel.app"
                 : process.env.NODE_ENV === "development" &&
                   "http://localhost:3000"
             }${srcId}`,
@@ -166,7 +166,7 @@ export default function App({
           .get(
             `${
               process.env.NODE_ENV === "production"
-                ? process.send.DOMAIN
+                ? "https://doctorin.vercel.app"
                 : process.env.NODE_ENV === "development" &&
                   "http://localhost:3000"
             }${destId}`
@@ -199,7 +199,7 @@ export default function App({
             axios.post(
               `${
                 process.env.NODE_ENV === "production"
-                  ? process.send.DOMAIN
+                  ? "https://doctorin.vercel.app"
                   : process.env.NODE_ENV === "development" &&
                     "http://localhost:3000"
               }${destId}`,
