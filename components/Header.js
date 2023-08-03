@@ -50,7 +50,11 @@ function Header() {
       </div>
       {router?.pathname === "/profile" && (
         <div className="w-[min(1400px,100%)] h-[48px] border-t border-blue-400 flex flex-row items-center justify-center">
-          <h5 className="h5 text-zinc-50">ihab _ndj</h5>
+          <h5 className="h5 text-zinc-50">
+            {appState.profile?.username
+              ? appState.profile?.username
+              : appState.profile?.name}
+          </h5>
           <Link
             href="/api/auth/signout"
             className="ml-auto px-4 py-1 rounded-md bg-zinc-50 text-zinc-950"
